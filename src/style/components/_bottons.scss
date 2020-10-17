@@ -1,0 +1,23 @@
+.btn{
+   font-size: large;
+   font-weight: bold;
+   outline: none;
+   padding: 5px 10px 5px 10px; 
+   &:hover{
+        background: rgb(187, 187, 187);
+   }
+}
+
+.btn-primary{
+    background: $primary;
+    border: 2px solid $primary;
+    border-radius: .6em;
+    color: white;
+    &:hover{
+        border: 2px solid $darkprimary;
+        background: $darkprimary;
+    }
+}
+.btn-block{
+    width: 100%;    
+}

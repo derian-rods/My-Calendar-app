@@ -1,0 +1,27 @@
+.login{
+    align-items: center;
+    background: $white;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.form__group{
+    display: flex;
+    margin: .5em 0;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.form__label{
+    margin-left: .5em;
+    font-weight: bold;
+}
+.login__footer-register{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1em;
+    color: $darkprimary;
+    &:hover{
+        color: $lightprimary;
+    }
+}
