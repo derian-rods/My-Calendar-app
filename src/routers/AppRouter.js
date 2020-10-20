@@ -6,7 +6,6 @@ import {
   } from "react-router-dom";
 import { CalendarScreen } from '../screen/CalendarScreen';
 import { LoginScreen } from '../screen/LoginScreen';
-import { RegisterScreen } from '../screen/RegisterScreen';
 import { PrivateRoute } from './PrivateRouter';
 
 export const AppRouter = () => {
@@ -16,8 +15,7 @@ export const AppRouter = () => {
                 {/* NavBar maybe */}
                 <Switch>
                     <Route exact path='/login' component={LoginScreen} />
-                    <Route exact path='/register' component={RegisterScreen} />
-                    <PrivateRoute exact path='/' isAuthenticated={true} component={CalendarScreen}/>
+                    <PrivateRoute exact path='/' isAuthenticated={false} component={CalendarScreen}/>
                 </Switch>
             </div> 
         </Router>

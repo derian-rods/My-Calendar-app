@@ -1,8 +1,10 @@
 .btn{
-   font-size: large;
-   font-weight: bold;
-   outline: none;
-   padding: 5px 10px 5px 10px; 
+    border-radius: .6em;
+    background: $white;
+    font-size: large;
+    font-weight: bold;
+    outline: none;
+    padding: 5px 10px 5px 10px; 
    &:hover{
         background: rgb(187, 187, 187);
    }
@@ -18,6 +20,48 @@
         background: $darkprimary;
     }
 }
+
+.google-btn {
+    cursor: pointer;
+    margin-top: 5px;
+    width: 100%;
+    height: 42px;
+    background-color: $google-blue;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: box-shadow .3s ease;
+
+    .google-icon-wrapper {
+        position: absolute;
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: #fff;
+    }
+    .google-icon {
+        position: absolute;
+        margin-top: 11px;
+        margin-left: 11px;
+        width: 18px;
+        height: 18px;
+    }
+    .btn-text {
+        float: right;
+        margin: 11px 30px 0 0;
+        color: $white;
+        font-size: 1em;
+        letter-spacing: 0.2px;
+    }
+    &:hover {
+        box-shadow: 0 0 6px $google-blue;
+    }
+    &:active {
+        background: $button-active-blue;
+    }
+}
+
 .btn-block{
     width: 100%;    
 }
