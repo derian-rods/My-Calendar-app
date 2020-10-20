@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import 'firebase/database';
+import 'firebase/firestore';
 const firebaseConfig = {
     apiKey: "AIzaSyA5sbLTRRYfDsy5XiA_3Ea80_I59Bxlw8U",
     authDomain: "my-calendarapp.firebaseapp.com",
@@ -13,11 +13,12 @@ const firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
 
-  const db = firebase.storage();
+  const db = firebase.firestore();
+  const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-  const auth = firebase.auth();
 
   export {
     db,
-    auth
+    googleAuthProvider,
+    firebase
   }

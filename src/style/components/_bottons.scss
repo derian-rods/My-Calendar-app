@@ -8,6 +8,10 @@
    &:hover{
         background: rgb(187, 187, 187);
    }
+   &:disabled{
+       border: 2px solid rgba(206, 206, 206, 0.473) ;
+       background: rgba(206, 206, 206, 0.473);
+   }
 }
 
 .btn-primary{

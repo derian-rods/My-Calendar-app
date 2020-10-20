@@ -4,11 +4,12 @@ import validator from 'validator';
 import google_logo from '../../assets/Google__G__Logo.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeError, setError } from '../../actions/ui';
+import { startLoginWithGoogle } from '../../actions/auth';
 export const LoginForm = () => {
 
     // redux
     const dispatch = useDispatch();
-    const {msgError} = useSelector(state => state.ui);
+    const {msgError, loading} = useSelector(state => state.ui);
     // handle Form
     const [ value, handleInputChange] = useForm({
         email: '',
@@ -23,7 +24,12 @@ export const LoginForm = () => {
             dispatch();
         }
     }
+    // Google Login
 
+    const handleGoogleLogin = () => {
+        dispatch(startLoginWithGoogle());
+    }
+ 
     const handleFormValio  = () => {
         switch (true) {
             case email.trim().length === 0: 
@@ -65,9 +71,9 @@ export const LoginForm = () => {
                     <label className='form__label'>Password</label>
                     <input type='password' name='password'  placeholder='Password' onChange={handleInputChange} value={password}/>
                 </div>
-                <button className='btn btn-primary btn-block' type='submit'>Login</button>
+                <button className='btn btn-primary btn-block' type='submit' disabled={loading}>Login</button>
             </form>
-            <div className='login__social-networks'>
+            <div className='login__social-networks' onClick={handleGoogleLogin}>
                     <p className='login__social-text'>Login With Social Networks</p>
                     <div className="google-btn">
                         <div className="google-icon-wrapper">
