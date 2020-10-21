@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import validator from 'validator';
+import { startRegister } from '../../actions/auth';
 import { removeError, setError } from '../../actions/ui';
 import {useForm} from '../../hooks/useForm';
 
@@ -53,7 +54,7 @@ export const RegisterForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (handleFormValio()){
-            dispatch();
+            dispatch(startRegister(email, password, username));
         }
     }
 

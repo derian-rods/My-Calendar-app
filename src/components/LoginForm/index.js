@@ -4,7 +4,7 @@ import validator from 'validator';
 import google_logo from '../../assets/Google__G__Logo.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeError, setError } from '../../actions/ui';
-import { startLoginWithGoogle } from '../../actions/auth';
+import { startLoginWithEmailAndPassword, startLoginWithGoogle } from '../../actions/auth';
 export const LoginForm = () => {
 
     // redux
@@ -21,7 +21,7 @@ export const LoginForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (handleFormValio()){
-            dispatch();
+            dispatch(startLoginWithEmailAndPassword(email, password));
         }
     }
     // Google Login
