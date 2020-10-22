@@ -7,4 +7,6 @@ export const types = {
      uiRemoveError: '[UI] Remove Error',
      uiStartLoading: '[UI] Start loading',
      uifinishLoading: '[UI] Finish loading',
+     uiSetLastView: '[UI] Set lastView',
+     uiUpgradeLastView: '[UI] Upgrade Last view',
 }

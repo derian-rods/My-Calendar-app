@@ -18,3 +18,8 @@ export const finishLoading = () => ({
     type: types.uifinishLoading,
     payload: false,
 })
+
+export const upgradeLastView = (lastview) => ({
+    type: types.uiUpgradeLastView,
+    payload: lastview
+})
