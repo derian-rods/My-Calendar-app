@@ -4,6 +4,7 @@ const initialState = {
     msgError: null,
     loading: false,
     lastView: localStorage.getItem('lastView'),
+    openModal: false,
 }
 
 export const uiReducer = (state = initialState, action) => {
@@ -36,6 +37,16 @@ export const uiReducer = (state = initialState, action) => {
                   ...state,
                   lastView: action.payload
               }
+              case types.uiOpenModal:
+                return{
+                  ...state,
+                  openModal: action.payload,
+                }
+              case types.uiCloseModal:
+                return{
+                  ...state,
+                  openModal: action.payload,
+                }
         default:
             return state
     }

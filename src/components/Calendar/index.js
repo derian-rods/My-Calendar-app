@@ -2,7 +2,8 @@ import React from 'react';
 import {Calendar, momentLocalizer} from 'react-big-calendar';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
-import { upgradeLastView } from '../../actions/ui';
+import { openModal, upgradeLastView } from '../../actions/ui';
+import { CalendarModal } from '../CalendarModal';
 
 
 
@@ -19,12 +20,15 @@ export const BigCalendar = () => {
 
    const {lastView} = useSelector(state => state.ui);
    const dispatch = useDispatch();
-   const doubleClickEvent = (e) => {
+  
+  
+    //  Calendar events
+   const isDoubleClickEvent = (e) => {
         console.log(e)
-   } 
-
-   const isSelectEvent = (e) => {
-    console.log(e)
+    } 
+    
+    const isSelectEvent = (e) => {
+        // dispatch(openModal())
 } 
 
     const onViewChange = (e) => {
@@ -39,12 +43,13 @@ export const BigCalendar = () => {
                 events={events}
                 startAccessor='start'
                 endAccessor='end'
-                onDoubleClickEvent={doubleClickEvent}
                 onSelectEvent={isSelectEvent}
                 onView={onViewChange}
+                onDoubleClickEvent={(e)=>console.log(e)}
                 view={lastView}
                 style={{ padding: '1em', width: '100%', height: '92vh'}}
             />
+            <CalendarModal />
         </div>
     )
 }

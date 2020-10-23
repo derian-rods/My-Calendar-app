@@ -9,4 +9,6 @@ export const types = {
      uifinishLoading: '[UI] Finish loading',
      uiSetLastView: '[UI] Set lastView',
      uiUpgradeLastView: '[UI] Upgrade Last view',
+     uiOpenModal: '[UI] Open Modal',
+     uiCloseModal: '[UI] Close Modal',
 }

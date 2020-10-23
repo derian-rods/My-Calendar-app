@@ -23,3 +23,11 @@ export const upgradeLastView = (lastview) => ({
     type: types.uiUpgradeLastView,
     payload: lastview
 })
+export const openModal = () => ({
+    type: types.uiOpenModal,
+    payload: true,
+})
+export const CloseModal = () => ({
+    type: types.uiCloseModal,
+    payload: false, 
+})
