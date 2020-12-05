@@ -45,7 +45,6 @@ export const startRegister = (email, password, name) => {
         try {
         const {user} = await firebase.auth().createUserWithEmailAndPassword(email, password);
         await user.updateProfile({displayName: name});
-        console.log(user);
         dispatch(login(user.uid, user.displayName))
         dispatch(finishLoading())
 

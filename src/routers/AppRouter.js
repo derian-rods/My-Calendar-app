@@ -10,6 +10,7 @@ import { PrivateRoute } from './PrivateRouter';
 import { useDispatch } from 'react-redux';
 import { login } from '../actions/auth';
 import { PublicRoute } from './PublicRouter';
+import { LoadingPage } from '../components/LoadingPage';
 
 export const AppRouter = () => {
 
@@ -26,11 +27,11 @@ export const AppRouter = () => {
             }
             setcheacking(false)
         })
-    }, [dispatch, ])
+    }, [dispatch ])
 
     if(cheacking){
         return(
-            <p>Loading Info wait....!</p>
+            <LoadingPage />
         )
     }
  

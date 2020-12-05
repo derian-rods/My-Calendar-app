@@ -1,9 +1,13 @@
+/* Base */
 @import './base//base';
 @import './base/settings';
-@import './screens/login';
+/* Components */
 @import './components/tabs';
 @import './components/bottons';
-@import 'react-big-calendar/lib/sass/styles';
-@import './screens/calendar';
 @import './components/toolbar';
-@import './components/modal'
+@import './components/modal';
+@import './components/_loadingpage';
+@import 'react-big-calendar/lib/sass/styles';
+/* Screen */
+@import './screens/login';
+@import './screens/calendar';
