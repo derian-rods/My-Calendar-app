@@ -36,6 +36,7 @@ export const BigCalendar = () => {
     return(
         <>
         <Calendar
+          titleAccessor='title'
           localizer={localizer}
           startAccessor="start"
           endAccessor="end"
