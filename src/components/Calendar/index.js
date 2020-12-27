@@ -11,14 +11,10 @@ const localizer = momentLocalizer(moment) // or globalizeLocalizer
 export const BigCalendar = () => {
     
     const {lastView} = useSelector(state => state.ui);
+    const {events} = useSelector(state => state.calendar);
     const dispatch = useDispatch();
     
-    const Events = [{
-        title: 'Mi cumpleaños',
-        start: moment().toDate(),
-        end: moment().add(5, 'hours').toDate(),
-        bgColor: 'red'
-    }]
+
     
     
     const onViewChange = (e) => {
@@ -27,7 +23,7 @@ export const BigCalendar = () => {
     }
     
     const isSelectEvent = (e) => {
-        console.log(e);
+        
     }
     
     const onDoubleClick = () => {
@@ -41,7 +37,7 @@ export const BigCalendar = () => {
           startAccessor="start"
           endAccessor="end"
           View={'may'}
-          events={Events}
+          events={events}
           onView={onViewChange}
           onSelectEvent={isSelectEvent}
           onDoubleClickEvent={onDoubleClick}

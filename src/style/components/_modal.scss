@@ -33,15 +33,35 @@
     border-radius: 5px;
     color: rgb(51, 51, 51);
     display: inline;
-    height: 70vh;
-    width: 50vw;
+    height: 75vh;
+    width: 40vw;
     outline: none;
     padding: 1em;
     top: 50%;
     bottom: auto;
     left: 50%;
     right: auto;
+    text-transform: capitalize;
     @media screen and (max-width: 1024px) {
         width: 80vw;
     }
+    @media screen and (width: 320px){
+        width: 90vw;
+        height: 89vh;
+    }
+}
+
+.modal__title{
+    display: flex;
+    justify-content: center;
+}
+.text__muted{
+    color: rgba(82, 82, 82, 0.61);
+}
+.react-datetime-picker__wrapper{
+    border-radius: 10px;
+    margin: .4em 0;
+    padding: .3em .5em;
+    align-items: center;
+    border: 2px solid #58A3C1 !important;
 }

@@ -12,9 +12,11 @@
     justify-content: flex-start;
     flex-direction: column;
 }
+.form__group-textarea{
+    height: 200px;
+}
 .form__label{
-    margin-left: .5em;
-    font-weight: bold;
+    margin-left: .4em;
 }
 .login__footer-register{
     text-align: center;

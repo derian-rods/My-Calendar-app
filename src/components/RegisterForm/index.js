@@ -71,7 +71,7 @@ export const RegisterForm = () => {
         <form onSubmit={handleSubmit}>
             <div className='form__group'>
                 <label className='form__label'>User Name</label>
-                <input type='text' name='username' placeholder='E-mail' autoComplete='off' onChange={handleInputChange} value={username}/>
+                <input type='text' name='username' placeholder='User Name' autoComplete='off' onChange={handleInputChange} value={username}/>
             </div>
             <div className='form__group'>
                 <label className='form__label'>E-mail</label>
